@@ -16,6 +16,12 @@ $('input[type="text"]').keypress(function(event) {
 	if (event.which === 13) {
 		// Grab text from input
 		var todoText = $(this).val();
+		//Check if text is empty
+		if(todoText=="")
+		      {
+			alert("Please enter some task!");
+			return;
+		      }
 		//Empty form field
 		$(this).val('');
 		// Create & add new <li> & <span> to <ul>
